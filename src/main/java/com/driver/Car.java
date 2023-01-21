@@ -20,7 +20,10 @@ public class Car extends Vehicle {
         this.seats= seats;
         this.currentGear= 1;
     }
-
+    Car(String name, boolean isManual){
+        super(name);
+        this.isManual= isManual;
+    }
     public int getWheels() {
         return wheels;
     }
@@ -78,7 +81,7 @@ public class Car extends Vehicle {
     }
 
     public void changeGear(int newGear){
-        this.currentGear= newGear;
+        setCurrentGear(newGear);
         System.out.println("changeGear method called - The gear is changed to: " + currentGear);
     }
 
